@@ -1,12 +1,12 @@
+import BackgroundImage from 'gatsby-background-image';
 import React from 'react';
-import { BannerContainer, BannerTitle, Image } from './BannerStyles';
+import { BannerTitle } from './BannerStyles';
 
-function Banner({ src, title }) {
+function Banner({ img, title = 'default', styleClass = 'default-background' }) {
   return (
-    <BannerContainer>
-      <Image src={src} alt="banner-image" />
+    <BackgroundImage fluid={img} className={styleClass} alt="banner-image">
       <BannerTitle>{title}</BannerTitle>
-    </BannerContainer>
+    </BackgroundImage>
   );
 }
 

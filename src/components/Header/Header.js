@@ -1,4 +1,6 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { CgMenuRight } from '@react-icons/all-files/cg/CgMenuRight';
+import { CgShoppingCart } from '@react-icons/all-files/cg/CgShoppingCart';
+import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import image from '../../images/logo-no-bg.png';
 import {
@@ -12,30 +14,18 @@ import {
   ShoppingCart,
   Title,
 } from './HeaderStyles';
-import { CgMenuRight } from '@react-icons/all-files/cg/CgMenuRight';
-import { CgShoppingCart } from '@react-icons/all-files/cg/CgShoppingCart';
 
-function Header() {
+function Header({ title = '' }) {
   const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false);
   const [navItems] = useState([
     { path: '/', name: 'Inicio', id: 1 },
     { path: '/', name: 'Sobre nosotros', id: 2 },
   ]);
 
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <Navbar>
       <Logo src={image} alt="logo" />
-      <Title>{data.site.siteMetadata.title}</Title>
+      <Title>{title}</Title>
       <Navigation>
         <NavbarToggle
           open={mobileNavigationOpen}
