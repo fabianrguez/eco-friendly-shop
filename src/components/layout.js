@@ -1,11 +1,11 @@
 // import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import './layout.css';
+import GlobalStyle from './globalStyle';
 import Header from './Header/Header';
 
 const Layout = ({ children }) => {
-/*   const data = useStaticQuery(graphql`
+  /*   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyle />
       <Header />
       <main>{children}</main>
     </>

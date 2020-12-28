@@ -6,6 +6,7 @@ export const Navbar = styled.header`
   justify-content: space-between;
   position: sticky;
   top: 0;
+  background: #fefefe;
 `;
 
 export const Navigation = styled.nav`
@@ -24,10 +25,10 @@ export const NavItems = styled.ul`
   margin: 1rem;
 
   @media (max-width: 768px) {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
-    height: ${props => (props.open ? '100vh' : 0)};
+    height: ${props => (props.open ? '100%' : 0)};
     background: #f7a4a4;
     z-index: 1;
     margin: 0;
