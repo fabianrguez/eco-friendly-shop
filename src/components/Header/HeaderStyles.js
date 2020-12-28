@@ -7,6 +7,7 @@ export const Navbar = styled.header`
   position: sticky;
   top: 0;
   background: #fefefe;
+  z-index: 1;
 `;
 
 export const Navigation = styled.nav`
@@ -109,12 +110,13 @@ export const NavbarToggle = styled.button`
 `;
 
 export const Title = styled.h1`
-  align-self: center;
+  flex: 1;
+  margin: 1rem;
+`;
 
-  @media (max-width: 768px) {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-  }
+export const Logo = styled.img`
+  object-fit: cover;
+  height: 80px;
+  margin-left: 10px;
+  align-self: center;
 `;

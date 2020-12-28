@@ -2,6 +2,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import React, { useState } from 'react';
 import image from '../../images/logo-no-bg.png';
 import {
+  Logo,
   Navbar,
   NavbarToggle,
   Navigation,
@@ -33,16 +34,7 @@ function Header() {
 
   return (
     <Navbar>
-      <img
-        src={image}
-        style={{
-          objectFit: 'cover',
-          height: '80px',
-          marginLeft: '10px',
-          alignSelf: 'center',
-        }}
-        alt="logo"
-      />
+      <Logo src={image} alt="logo" />
       <Title>{data.site.siteMetadata.title}</Title>
       <Navigation>
         <NavbarToggle

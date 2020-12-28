@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
-  main {
+  section {
     padding: 1rem;
   }
   
