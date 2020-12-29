@@ -84,7 +84,7 @@ export const BigTitle = styled.h1`
   font-size: 2.4rem;
   align-self: flex-start;
 `;
-
+ 
 export const Text = styled.p`
   text-align: justify;
 `;
