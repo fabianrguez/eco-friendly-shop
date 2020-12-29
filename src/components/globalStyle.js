@@ -26,11 +26,7 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     font-family: 'Loved by the King', cursive;
   }
-  
-  button {
-    font-family: inherit;
-  }
-  
+
   a {
     text-decoration: none;
     color: inherit;
@@ -39,9 +35,9 @@ const GlobalStyle = createGlobalStyle`
   a:visited {
     color: inherit;
   }
-  
+
   .default-background {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +50,10 @@ const GlobalStyle = createGlobalStyle`
   @media (max-width: 768px) {
     body {
       overflow-x: hidden;
+    }
+
+    .default-background {
+      min-height: 50vh;
     }
   }
 `;
@@ -69,7 +69,44 @@ export const Backdrop = styled.div`
 `;
 
 export const Section = styled.section`
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 10rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem 1.4rem;
+  }
+`;
+
+export const BigTitle = styled.h1`
+  font-size: 2.4rem;
+  align-self: flex-start;
+`;
+
+export const Text = styled.p`
+  text-align: justify;
+`;
+
+export const Button = styled.button`
+  font-family: inherit;
+  padding: 0.75rem;
+  background: transparent;
+  border: 1px solid #f7a4a4;
+  color: #f7a4a4;
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 1rem;
+  max-width: 12rem;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: all ease-in-out 0.4s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
 export default GlobalStyle;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section } from '../components/globalStyle';
+import { BigTitle, Section } from '../components/globalStyle';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -8,7 +8,7 @@ function aboutUs() {
     <Layout>
       <SEO title="Sobre Nosotros" />
       <Section>
-        <h1>Sobre Nosotros</h1>
+        <BigTitle>Sobre Nosotros</BigTitle>
       </Section>
     </Layout>
   );

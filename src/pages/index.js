@@ -1,7 +1,7 @@
-import { graphql } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 import React from 'react';
 import Banner from '../components/Banner/Banner';
-import { Section } from '../components/globalStyle';
+import { BigTitle, Button, Section, Text } from '../components/globalStyle';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -14,23 +14,19 @@ const IndexPage = ({ data }) => {
         title="Bienvenidos al nuevo futuro. Ser eco-friendly es posible"
       />
       <Section>
-        <h1>Index page</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut
-          optio doloribus, in beatae quidem asperiores porro iste repudiandae!
-          Quidem est mollitia repellendus libero consectetur nemo numquam saepe
-          nihil laborum! Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Provident ut optio doloribus, in beatae quidem asperiores porro
-          iste repudiandae! Quidem est mollitia repellendus libero consectetur
-          nemo numquam saepe nihil laborum! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Provident ut optio doloribus, in beatae
-          quidem asperiores porro iste repudiandae! Quidem est mollitia
-          repellendus libero consectetur nemo numquam saepe nihil laborum! Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Provident ut optio
-          doloribus, in beatae quidem asperiores porro iste repudiandae! Quidem
-          est mollitia repellendus libero consectetur nemo numquam saepe nihil
-          laborum!
-        </p>
+        <BigTitle>Nuestro objetivo</BigTitle>
+        <Text>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+          pariatur deserunt adipisci animi sed corrupti nihil ut laboriosam modi
+          dolorem dignissimos aperiam placeat, enim voluptas. Voluptates eos
+          nulla ut ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Asperiores pariatur deserunt adipisci animi sed corrupti nihil
+          ut laboriosam modi dolorem dignissimos aperiam placeat, enim voluptas.
+          Voluptates eos nulla ut ipsa.
+        </Text>
+        <Button onClick={() => navigate('/about-us')}>
+          Quiero saber más...
+        </Button>
       </Section>
     </Layout>
   );
