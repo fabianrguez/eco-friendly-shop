@@ -18,12 +18,14 @@ import {
 function Header({ title = '', menuOpen, menuOpenHandler }) {
   const [navItems] = useState([
     { path: '/', name: 'Inicio', id: 1 },
-    { path: '/', name: 'Sobre nosotros', id: 2 },
+    { path: '/about-us', name: 'Sobre nosotros', id: 2 },
   ]);
 
   return (
     <Navbar>
-      <Logo src={image} alt="logo" />
+      <Link to="/">
+        <Logo src={image} alt="logo" />
+      </Link>
       <Title>{title}</Title>
       <Navigation>
         <NavbarToggle

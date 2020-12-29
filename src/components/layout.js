@@ -1,4 +1,3 @@
-// import { graphql, useStaticQuery } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
@@ -22,8 +21,6 @@ const Layout = ({ children }) => {
   const clickBackdropHandler = () => {
     setMenuOpen(false);
   };
-
-  console.log(data);
 
   useEffect(() => {
     menuOpen
