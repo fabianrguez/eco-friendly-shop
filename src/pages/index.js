@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import Banner from '../components/Banner/Banner';
+import { Section } from '../components/globalStyle';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -12,7 +13,7 @@ const IndexPage = ({ data }) => {
         img={data.img.childImageSharp.fluid}
         title="Bienvenidos al nuevo futuro. Ser eco-friendly es posible"
       />
-      <section>
+      <Section>
         <h1>Index page</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut
@@ -30,7 +31,7 @@ const IndexPage = ({ data }) => {
           est mollitia repellendus libero consectetur nemo numquam saepe nihil
           laborum!
         </p>
-      </section>
+      </Section>
     </Layout>
   );
 };

@@ -39,11 +39,7 @@ const GlobalStyle = createGlobalStyle`
   a:visited {
     color: inherit;
   }
-
-  section {
-    padding: 1rem;
-  }
-
+  
   .default-background {
     min-height: 100vh;
     display: flex;
@@ -70,6 +66,10 @@ export const Backdrop = styled.div`
   z-index: 100;
   top: 0;
   left: 0;
+`;
+
+export const Section = styled.section`
+  padding: 1rem;
 `;
 
 export default GlobalStyle;
