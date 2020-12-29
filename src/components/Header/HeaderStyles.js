@@ -7,7 +7,7 @@ export const Navbar = styled.header`
   position: sticky;
   top: 0;
   background: #fefefe;
-  z-index: 1;
+  z-index: 200;
 `;
 
 export const Navigation = styled.nav`
@@ -54,6 +54,7 @@ export const NavItem = styled.li`
   font-weight: 600;
   text-transform: capitalize;
   margin: 0.15rem;
+  z-index: 200;
 
   &:hover {
     background: #fff;

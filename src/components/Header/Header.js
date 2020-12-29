@@ -15,8 +15,7 @@ import {
   Title,
 } from './HeaderStyles';
 
-function Header({ title = '' }) {
-  const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false);
+function Header({ title = '', menuOpen, menuOpenHandler }) {
   const [navItems] = useState([
     { path: '/', name: 'Inicio', id: 1 },
     { path: '/', name: 'Sobre nosotros', id: 2 },
@@ -28,12 +27,12 @@ function Header({ title = '' }) {
       <Title>{title}</Title>
       <Navigation>
         <NavbarToggle
-          open={mobileNavigationOpen}
-          onClick={() => setMobileNavigationOpen(!mobileNavigationOpen)}
+          open={menuOpen}
+          onClick={() => menuOpenHandler(!menuOpen)}
         >
           <CgMenuRight />
         </NavbarToggle>
-        <NavItems open={mobileNavigationOpen}>
+        <NavItems open={menuOpen}>
           {navItems.map(navItem => (
             <NavItem key={navItem.id}>
               <Link to={navItem.path}>{navItem.name}</Link>
