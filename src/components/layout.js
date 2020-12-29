@@ -2,6 +2,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import Footer from './Footer/Footer';
 import GlobalStyle, { Backdrop } from './globalStyle';
 import Header from './Header/Header';
 
@@ -22,6 +23,8 @@ const Layout = ({ children }) => {
     setMenuOpen(false);
   };
 
+  console.log(data);
+
   useEffect(() => {
     menuOpen
       ? (document.body.style.overflowY = 'hidden')
@@ -32,16 +35,19 @@ const Layout = ({ children }) => {
     );
   }, [menuOpen]);
 
+  const siteTitle = data.site?.siteMetadata.title || '';
+
   return (
     <>
       <GlobalStyle />
       {menuOpen && <Backdrop onClick={() => clickBackdropHandler()} />}
       <Header
-        title={data.site?.siteMetadata.title}
+        title={siteTitle}
         menuOpen={menuOpen}
         menuOpenHandler={setMenuOpen}
       />
       <main>{children}</main>
+      <Footer title={siteTitle} />
     </>
   );
 };
