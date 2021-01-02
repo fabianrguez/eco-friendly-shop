@@ -3,6 +3,7 @@ import React from 'react';
 import Banner from '../components/Banner/Banner';
 import { BigTitle, Button, Section, Text } from '../components/globalStyle';
 import Layout from '../components/layout';
+import ProductsList from '../components/Products/ProductsList';
 import SEO from '../components/seo';
 
 const IndexPage = ({ data }) => {
@@ -11,7 +12,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Inicio" />
       <Banner
         img={data.img.childImageSharp.fluid}
-        title="Bienvenidos al nuevo futuro. Ser eco-friendly es posible"
+        title="Bienvenidos al nuevo futuro. Ser eco-friendly es posible."
       />
       <Section>
         <BigTitle>Nuestro objetivo</BigTitle>
@@ -28,6 +29,10 @@ const IndexPage = ({ data }) => {
           Quiero saber más...
         </Button>
       </Section>
+      <Section>
+        <BigTitle>Nuestros productos</BigTitle>
+        <ProductsList products={data.products.edges} />
+      </Section>
     </Layout>
   );
 };
@@ -38,6 +43,25 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    products: allContentfulProduct {
+      edges {
+        node {
+          id
+          name
+          price
+          category
+          featured
+          description {
+            description
+          }
+          image {
+            fluid(maxHeight: 326) {
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
         }
       }
     }

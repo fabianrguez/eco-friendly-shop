@@ -84,7 +84,7 @@ export const BigTitle = styled.h1`
   font-size: 2.4rem;
   align-self: flex-start;
 `;
- 
+
 export const Text = styled.p`
   text-align: justify;
 `;
@@ -103,10 +103,10 @@ export const Button = styled.button`
   font-size: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   transition: all ease-in-out 0.4s;
+  outline: none;
 
   &:hover {
     transform: scale(1.02);
   }
 `;
-
 export default GlobalStyle;
