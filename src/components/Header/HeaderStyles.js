@@ -8,6 +8,8 @@ export const Navbar = styled.header`
   top: 0;
   background: #fefefe;
   z-index: 200;
+  height: 90px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
 `;
 
 export const Navigation = styled.nav`
