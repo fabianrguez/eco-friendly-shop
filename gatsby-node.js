@@ -1,7 +1,35 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require('path');
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const allProducts = await graphql(`
+    {
+      products: allContentfulProduct {
+        edges {
+          node {
+            id
+            name
+            price
+            category
+            featured
+            description {
+              description
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const productPage = path.resolve('src/pages/products/product.js');
+  allProducts &&
+    allProducts.data.products.edges.forEach(({ node }) => {
+      createPage({
+        path: `/products/${node.id}`,
+        component: productPage,
+        context: {
+          product: node,
+        },
+      });
+    });
+};
