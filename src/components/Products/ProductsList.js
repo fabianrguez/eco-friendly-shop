@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { Button } from '../globalStyle';
 import Product from './Product';
@@ -11,7 +12,9 @@ function ProductsList({ products }) {
   return (
     <ProductsListContainer>
       <ProductsListWrapper>
-        <Product {...featuredProducts[0]?.node} shortDescription />
+        <Link to={`/products/${featuredProducts[0]?.node.id}`}>
+          <Product {...featuredProducts[0]?.node} shortDescription />
+        </Link>
         <Product {...featuredProducts[0]?.node} shortDescription />
         <Product {...featuredProducts[0]?.node} shortDescription />
       </ProductsListWrapper>

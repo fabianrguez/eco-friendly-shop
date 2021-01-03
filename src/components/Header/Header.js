@@ -18,7 +18,8 @@ import {
 function Header({ title = '', menuOpen, menuOpenHandler }) {
   const [navItems] = useState([
     { path: '/', name: 'Inicio', id: 1 },
-    { path: '/about-us', name: 'Sobre nosotros', id: 2 },
+    { path: '/products', name: 'Nuestros productos', id: 2 },
+    { path: '/about-us', name: 'Sobre nosotros', id: 3 },
   ]);
 
   return (
