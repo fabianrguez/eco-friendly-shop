@@ -9,9 +9,9 @@ function ProductPage({ pageContext }) {
     <Layout>
       <SEO title="Producto tal" />
       <Section>
-        <h1>{product.name}</h1>
-        <div>Price: {product.price}</div>
-        <Text>Description: {product.description.description}</Text>
+        <h1>{product?.name}</h1>
+        <div>Price: {product?.price}</div>
+        <Text>Description: {product?.description.description}</Text>
       </Section>
     </Layout>
   );
