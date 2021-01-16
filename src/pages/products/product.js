@@ -11,8 +11,8 @@ import {
   ProductName,
   ProductPrice,
   ProductPriceContainer,
-  ProductPriceWrapper
-} from './ProductPageStyles';
+  ProductPriceWrapper,
+} from '../../components/ProductPageStyles';
 
 function ProductPage({ pageContext }) {
   const { product } = pageContext;

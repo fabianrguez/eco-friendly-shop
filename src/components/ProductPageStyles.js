@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { Button } from '../../components/globalStyle';
+import { Button } from './globalStyle';
 import { CgShoppingCart } from 'react-icons/cg';
 
 export const ProductContainer = styled.div`
