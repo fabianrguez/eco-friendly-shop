@@ -91,6 +91,8 @@ export const ShoppingBadge = styled.span`
   right: 0;
   color: #f7a4a4;
   font-size: small;
+  opacity: ${({ show }) => (show ? '1' : '0')};
+  transition: all ease-in 0.4s;
 `;
 
 export const NavbarToggle = styled.button`
