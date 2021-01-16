@@ -73,7 +73,7 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.2rem 10rem;
+  padding: ${({ noFluid }) => (noFluid ? '1rem 1.4rem' : '1.2rem 10rem')};
 
   @media (max-width: 768px) {
     padding: 1rem 1.4rem;

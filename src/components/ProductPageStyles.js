@@ -82,7 +82,8 @@ export const CartIcon = styled(CgShoppingCart)`
 
 export const ProductImage = styled(Img)`
   width: 50%;
-  max-height: 460px;
+  max-height: 326px;
+  max-width: 326px;
   border-radius: 20px;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.3);
 
