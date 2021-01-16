@@ -2,6 +2,7 @@ const path = require('path');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+
   const allProducts = await graphql(`
     {
       products: allContentfulProduct {
@@ -14,6 +15,15 @@ exports.createPages = async ({ graphql, actions }) => {
             featured
             description {
               description
+            }
+            image {
+              fluid(maxHeight: 326) {
+                base64
+                aspectRatio
+                src
+                srcSet
+                sizes
+              }
             }
           }
         }

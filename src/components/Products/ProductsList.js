@@ -1,24 +1,35 @@
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
-import { Button } from '../globalStyle';
+import React, { useEffect, useState } from 'react';
 import Product from './Product';
 import { ProductsListContainer, ProductsListWrapper } from './ProductsStyles';
 
-function ProductsList({ products }) {
-  const [featuredProducts] = useState(
-    products.filter(({ node: product }) => product.featured === true)
-  );
+function ProductsList({ products, onlyFeatured = true }) {
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+
+  useEffect(() => {
+    products &&
+      setFeaturedProducts(
+        products.filter(({ node: product }) => product.featured === true)
+      );
+  }, [products]);
 
   return (
     <ProductsListContainer>
       <ProductsListWrapper>
-        <Link to={`/products/${featuredProducts[0]?.node.id}`}>
-          <Product {...featuredProducts[0]?.node} shortDescription />
-        </Link>
-        <Product {...featuredProducts[0]?.node} shortDescription />
-        <Product {...featuredProducts[0]?.node} shortDescription />
+        {onlyFeatured
+          ? featuredProducts &&
+            featuredProducts.map(({ node }) => (
+              <Link key={node.id} to={`/products/${node.id}`}>
+                <Product {...node} shortDescription />
+              </Link>
+            ))
+          : products &&
+            products.map(({ node }) => (
+              <Link key={node.id} to={`/products/${node.id}`}>
+                <Product {...node} shortDescription />
+              </Link>
+            ))}
       </ProductsListWrapper>
-      <Button>Ver todos los productos</Button>
     </ProductsListContainer>
   );
 }

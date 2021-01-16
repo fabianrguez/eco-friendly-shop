@@ -3,7 +3,6 @@ import { ProductCard, ProductPrice } from './ProductsStyles';
 import Img from 'gatsby-image';
 
 function Product({
-  category,
   name,
   price,
   image,

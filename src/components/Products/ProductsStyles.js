@@ -19,7 +19,7 @@ export const ProductCard = styled.div`
   border-radius: 20px;
   min-height: 330px;
   min-width: 220px;
-  max-width: 330px;
+  max-width: 300px;
   padding: 1rem;
   margin: 0.35rem;
   cursor: pointer;

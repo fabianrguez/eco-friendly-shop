@@ -7,6 +7,7 @@ import ProductsList from '../components/Products/ProductsList';
 import SEO from '../components/seo';
 
 const IndexPage = ({ data }) => {
+  console.log(data);
   return (
     <Layout>
       <SEO title="Inicio" />
@@ -32,6 +33,9 @@ const IndexPage = ({ data }) => {
       <Section>
         <BigTitle>Nuestros productos</BigTitle>
         <ProductsList products={data.products.edges} />
+        <Button onClick={() => navigate('/products')}>
+          Ver todos los productos
+        </Button>
       </Section>
     </Layout>
   );

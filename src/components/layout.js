@@ -36,6 +36,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      {}
       <GlobalStyle />
       {menuOpen && <Backdrop onClick={() => clickBackdropHandler()} />}
       <Header
