@@ -37,7 +37,7 @@ export const ProductPriceContainer = styled.div`
     width: 50%;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 390px) {
     width: 100%;
   }
 `;
@@ -86,7 +86,7 @@ export const ProductImage = styled(Img)`
   border-radius: 20px;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.3);
 
-  @media (max-width: 375px) {
+  @media (max-width: 390px) {
     width: 90%;
   }
 `;
