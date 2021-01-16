@@ -22,7 +22,7 @@ function ProductPage({ pageContext }) {
       <SEO title={product?.name} />
       <Section>
         <ProductContainer>
-          <ProductImage fluid={product.image.fluid} />
+          <ProductImage fluid={product?.image.fluid} />
           <ProductInfo>
             <ProductName>{product?.name}</ProductName>
             <ProductPriceWrapper>
