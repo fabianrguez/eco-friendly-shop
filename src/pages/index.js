@@ -7,7 +7,6 @@ import ProductsList from '../components/Products/ProductsList';
 import SEO from '../components/seo';
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       <SEO title="Inicio" />
