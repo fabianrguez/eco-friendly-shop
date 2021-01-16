@@ -5,10 +5,10 @@ import { CgShoppingCart } from 'react-icons/cg';
 
 export const ProductContainer = styled.div`
   display: flex;
+  align-items: center;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    align-items: center;
   }
 `;
 
