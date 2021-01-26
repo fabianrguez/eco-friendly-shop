@@ -92,9 +92,9 @@ export const Text = styled.p`
 export const Button = styled.button`
   font-family: inherit;
   padding: 0.75rem;
-  background: transparent;
+  background: ${({ active }) => (active ? '#f7a4a4' : 'transparent')};
   border: 1px solid #f7a4a4;
-  color: #f7a4a4;
+  color: ${({ active }) => (active ? '#fff' : '#f7a4a4')};
   font-weight: 600;
   border-radius: 10px;
   margin: 1rem;
@@ -104,6 +104,7 @@ export const Button = styled.button`
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   transition: all ease-in-out 0.4s;
   outline: none;
+  text-transform: capitalize;
 
   &:hover {
     transform: scale(1.02);

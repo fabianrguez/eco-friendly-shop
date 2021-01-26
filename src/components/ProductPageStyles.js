@@ -88,6 +88,11 @@ export const ProductImage = styled(Img)`
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 390px) {
-    width: 90%;
+    width: 100%;
   }
+`;
+
+export const Filters = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `;
