@@ -15,6 +15,11 @@ function reducer(state, action) {
         ...state,
         cart: [...state.cart, action.item],
       };
+    case actionType.REMOVE_FROM_CART:
+      return {
+        ...state,
+        cart: state.cart.filter(item => item.id !== action.item),
+      };
     default:
       return state;
   }

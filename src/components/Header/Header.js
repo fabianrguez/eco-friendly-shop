@@ -49,12 +49,14 @@ function Header({ title = '', menuOpen, menuOpenHandler }) {
               <Link to={navItem.path}>{navItem.name}</Link>
             </NavItem>
           ))}
-          <ShoppingCart>
-            <ShoppingBadge show={cartItemsTotal > 0}>
-              {cartItemsTotal}
-            </ShoppingBadge>
-            <CgShoppingCart />
-          </ShoppingCart>
+          <Link to="/cart">
+            <ShoppingCart>
+              <ShoppingBadge show={cartItemsTotal > 0}>
+                {cartItemsTotal}
+              </ShoppingBadge>
+              <CgShoppingCart />
+            </ShoppingCart>
+          </Link>
         </NavItems>
       </Navigation>
     </Navbar>

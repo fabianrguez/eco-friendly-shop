@@ -30,6 +30,8 @@ const Layout = ({ children }) => {
       'resize',
       e => e.target.innerWidth > 768 && setMenuOpen(false)
     );
+
+    return () => window.removeEventListener('resize', null);
   }, [menuOpen]);
 
   const siteTitle = data.site?.siteMetadata.title || '';

@@ -6,18 +6,18 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   *:after,
   *:before {
     box-sizing: inherit;
   }
-  
+
   html,
   body {
     font-family: 'Roboto', sans-serif;
     color: #111;
   }
-  
+
   h1,
   h2,
   h3,
@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
-  
+
   a:visited {
     color: inherit;
   }
@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     opacity: 1 !important;
   }
-  
+
   @media (max-width: 768px) {
     body {
       overflow-x: hidden;
@@ -105,6 +105,8 @@ export const Button = styled.button`
   transition: all ease-in-out 0.4s;
   outline: none;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
 
   &:hover {
     transform: scale(1.02);
