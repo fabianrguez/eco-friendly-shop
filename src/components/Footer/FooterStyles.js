@@ -42,6 +42,7 @@ export const SocialLink = styled.a`
 
 export const Paragraph = styled.p`
   font-size: small;
+  text-align: center;
 `;
 
 export const Telephone = styled.a`
