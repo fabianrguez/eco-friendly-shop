@@ -14,12 +14,12 @@ function Product({
 
   return (
     <ProductCard>
-      <Img fluid={image.fluid} />
+      <Img fluid={image?.fluid} />
       <h1>{name}</h1>
       <p>
         {shortDescription
-          ? truncate(description.description, 150)
-          : description.description}
+          ? truncate(description?.description)
+          : description?.description}
       </p>
       <ProductPrice>
         <span>{price}€</span>

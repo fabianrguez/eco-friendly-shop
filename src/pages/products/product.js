@@ -4,6 +4,7 @@ import Layout from '../../components/layout';
 import {
   AddToCart,
   CartIcon,
+  Features,
   ProductContainer,
   ProductImage,
   ProductInfo,
@@ -25,7 +26,7 @@ function ProductPage({ pageContext }) {
       <SEO title={product?.name} />
       <Section noFluid>
         <ProductContainer>
-          <ProductImage fluid={product?.image.fluid} />
+          <ProductImage fluid={product?.image?.fluid} />
           <ProductInfo>
             <ProductName>{product?.name}</ProductName>
             <ProductPriceWrapper>
@@ -41,7 +42,8 @@ function ProductPage({ pageContext }) {
                 <ProductPrice>{product?.price}</ProductPrice>
               </ProductPriceContainer>
             </ProductPriceWrapper>
-            <Text>{product?.description.description}</Text>
+            <Text>{product?.description?.description}</Text>
+            <Features>Materiales: {product?.features}</Features>
           </ProductInfo>
         </ProductContainer>
       </Section>

@@ -16,6 +16,14 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Roboto', sans-serif;
     color: #111;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #___gatsby, #gatsby-focus-wrapper {
+    height: 100%
   }
 
   h1,
@@ -34,6 +42,10 @@ const GlobalStyle = createGlobalStyle`
 
   a:visited {
     color: inherit;
+  }
+
+  main {
+    min-height: 74%;
   }
 
   .default-background {
@@ -75,7 +87,7 @@ export const Section = styled.section`
   justify-content: center;
   padding: ${({ noFluid }) => (noFluid ? '1rem 1.4rem' : '1.2rem 10rem')};
 
-  @media (max-width: 768px) {
+  @media (max-width: 945px) {
     padding: 1rem 1.4rem;
   }
 `;
@@ -87,6 +99,25 @@ export const BigTitle = styled.h1`
 
 export const Text = styled.p`
   text-align: justify;
+`;
+
+export const Signature = styled.p`
+  text-align: right;
+
+  & span {
+    font-family: 'Loved by the King', cursive;
+    font-size: 28px;
+  }
+`;
+
+export const LargeText = styled.p`
+  text-align: justify;
+  line-height: 1.6;
+
+  & span {
+    font-family: 'Loved by the King', cursive;
+    font-size: 28px;
+  }
 `;
 
 export const Button = styled.button`
@@ -112,4 +143,26 @@ export const Button = styled.button`
     transform: scale(1.02);
   }
 `;
+
+export const Objectives = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0px 5px 7px rgb(0 0 0 / 20%), 0px -5px 7px rgb(0 0 0 / 20%);
+`;
+
+export const Objective = styled.h1`
+  font-size: 2rem;
+  text-align: center;
+
+  &:before {
+    content: '- ';
+  }
+`;
+
 export default GlobalStyle;

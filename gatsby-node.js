@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
             description {
               description
             }
+            features
             image {
               fluid(maxHeight: 326, maxWidth: 326) {
                 base64

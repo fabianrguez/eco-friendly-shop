@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const FooterContainer = styled.footer`
   background: #f7a4a4;
   padding: 2rem;
+  margin-top: auto;
 `;
 
 export const FooterContent = styled.div`
@@ -41,4 +42,20 @@ export const SocialLink = styled.a`
 
 export const Paragraph = styled.p`
   font-size: small;
+`;
+
+export const Telephone = styled.a`
+  font-weight: 800;
+
+  &:before {
+    content: ' ';
+  }
+`;
+
+export const Mail = styled.a`
+  font-weight: 800;
+
+  &:before {
+    content: ' ';
+  }
 `;

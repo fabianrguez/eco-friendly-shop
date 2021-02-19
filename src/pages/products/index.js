@@ -4,12 +4,17 @@ import { BigTitle, Button, Section } from '../../components/globalStyle';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import ProductsList from '../../components/Products/ProductsList';
-import { Filters } from '../../components/ProductPageStyles';
+import {
+  Filters,
+  MobileFilterButton,
+} from '../../components/ProductPageStyles';
+import { FiFilter } from 'react-icons/fi';
 
 function ProductsPage({ data }) {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState('Todos');
+  const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
     setProducts(data.products.edges);
@@ -35,12 +40,17 @@ function ProductsPage({ data }) {
         );
   };
 
+  const toggleFilters = () => setShowFilters(!showFilters);
+
   return (
     <Layout>
       <SEO title="Productos" />
       <Section>
         <BigTitle>Nuestros productos</BigTitle>
-        <Filters>
+        <MobileFilterButton onClick={toggleFilters}>
+          <FiFilter />
+        </MobileFilterButton>
+        <Filters showFilters={showFilters}>
           {categories.map((category, index) => (
             <Button
               key={index}

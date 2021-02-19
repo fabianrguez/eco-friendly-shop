@@ -9,15 +9,13 @@ import {
   ProductImage,
   ProductPrice,
   ProductPriceContainer,
-  ProductPriceWrapper,
+  ProductPriceWrapper
 } from './ProductCartStyle';
-import Img from 'gatsby-image';
 
 function ProductCart({ id, name, price, image }) {
   const dispatch = useDispatchContext();
 
   const removeFromCart = () => {
-    console.log('removeFromCart');
     dispatch({
       type: actionType.REMOVE_FROM_CART,
       item: id,

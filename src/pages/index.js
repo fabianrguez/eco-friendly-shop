@@ -1,7 +1,13 @@
 import { graphql, navigate } from 'gatsby';
 import React from 'react';
 import Banner from '../components/Banner/Banner';
-import { BigTitle, Button, Section, Text } from '../components/globalStyle';
+import {
+  BigTitle,
+  Button,
+  Objective,
+  Objectives,
+  Section,
+} from '../components/globalStyle';
 import Layout from '../components/layout';
 import ProductsList from '../components/Products/ProductsList';
 import SEO from '../components/seo';
@@ -15,16 +21,12 @@ const IndexPage = ({ data }) => {
         title="Bienvenidos al nuevo futuro. Ser eco-friendly es posible."
       />
       <Section>
-        <BigTitle>Nuestro objetivo</BigTitle>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-          pariatur deserunt adipisci animi sed corrupti nihil ut laboriosam modi
-          dolorem dignissimos aperiam placeat, enim voluptas. Voluptates eos
-          nulla ut ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Asperiores pariatur deserunt adipisci animi sed corrupti nihil
-          ut laboriosam modi dolorem dignissimos aperiam placeat, enim voluptas.
-          Voluptates eos nulla ut ipsa.
-        </Text>
+        <BigTitle>Nuestros objetivos</BigTitle>
+        <Objectives>
+          <Objective>Calidad Superior</Objective>
+          <Objective>Respeto a los animales</Objective>
+          <Objective>Envoltorio lógico</Objective>
+        </Objectives>
         <Button onClick={() => navigate('/about-us')}>
           Quiero saber más...
         </Button>

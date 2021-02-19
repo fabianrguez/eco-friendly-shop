@@ -6,9 +6,15 @@ import { CgShoppingCart } from 'react-icons/cg';
 export const ProductContainer = styled.div`
   display: flex;
   align-items: center;
+  max-width: 75%;
+
+  @media (max-width: 1080px) {
+    max-width: 100%;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
+    max-width: 100%;
   }
 `;
 
@@ -92,7 +98,45 @@ export const ProductImage = styled(Img)`
   }
 `;
 
+export const MobileFilterButton = styled.button`
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 38px;
+  align-self: flex-start;
+  color: #f7a4a4;
+  display: none;
+  cursor: pointer;
+  transition: all ease-in-out 0.4s;
+
+  @media (max-width: 768px) {
+    display: inline-block;
+  }
+
+  &:active {
+    transform: scale(1.08);
+  }
+`;
+
 export const Filters = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.4s;
+
+  @media (max-width: 768px) {
+    opacity: ${({ showFilters }) => (showFilters ? '1' : '0')};
+    max-height: ${({ showFilters }) => (showFilters ? '100%' : '0')};
+    height: ${({ showFilters }) => (showFilters ? '100%' : '0')};
+  }
+`;
+
+export const Features = styled.p`
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+  margin: 1rem 0;
 `;
