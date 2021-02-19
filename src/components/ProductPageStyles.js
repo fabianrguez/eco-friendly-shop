@@ -6,6 +6,7 @@ import { CgShoppingCart } from 'react-icons/cg';
 export const ProductContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   max-width: 75%;
 
   @media (max-width: 1080px) {

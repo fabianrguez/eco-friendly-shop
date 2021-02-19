@@ -4,8 +4,7 @@ import Banner from '../components/Banner/Banner';
 import {
   BigTitle,
   Button,
-  Objective,
-  Objectives,
+  ObjectivesText,
   Section,
 } from '../components/globalStyle';
 import Layout from '../components/layout';
@@ -22,11 +21,12 @@ const IndexPage = ({ data }) => {
       />
       <Section>
         <BigTitle>Nuestros objetivos</BigTitle>
-        <Objectives>
-          <Objective>Calidad Superior</Objective>
-          <Objective>Respeto a los animales</Objective>
-          <Objective>Envoltorio lógico</Objective>
-        </Objectives>
+        <ObjectivesText>
+          Los objetivos que en <span>Eco&Friendly</span> nos hemos propuesto y
+          nos gustaría llegar a alcanzar son: un consumo más sostenible
+          utilizando productos de alta calidad, respetando a los animales y
+          utilizando envases lógicos.
+        </ObjectivesText>
         <Button onClick={() => navigate('/about-us')}>
           Quiero saber más...
         </Button>

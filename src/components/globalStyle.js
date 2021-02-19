@@ -144,24 +144,14 @@ export const Button = styled.button`
   }
 `;
 
-export const Objectives = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  color: #111;
-  padding: 1rem;
-  border-radius: 10px;
-  max-width: 700px;
-  box-shadow: 0px 5px 7px rgb(0 0 0 / 20%), 0px -5px 7px rgb(0 0 0 / 20%);
-`;
+export const ObjectivesText = styled.p`
+  font-size: 1.4rem;
+  text-align: justify;
+  line-height: 1.8;
 
-export const Objective = styled.h1`
-  font-size: 2rem;
-  text-align: center;
-
-  &:before {
-    content: '- ';
+  & span {
+    font-family: 'Loved by the King', cursive;
+    font-size: 36px;
   }
 `;
 
