@@ -39,7 +39,7 @@ function ProductPage({ pageContext }) {
                 <span>Añadir al carrito</span>
               </AddToCart>
               <ProductPriceContainer>
-                <ProductPrice>{product?.price}</ProductPrice>
+                <ProductPrice>{product?.price.toFixed(2)}</ProductPrice>
               </ProductPriceContainer>
             </ProductPriceWrapper>
             <Text>{product?.description?.description}</Text>

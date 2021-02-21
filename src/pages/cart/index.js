@@ -49,7 +49,7 @@ function Cart() {
               ))}
             <TotalPrice>
               <PriceRow>
-                Total: <Price>{getCartTotalPrice(cart)}</Price>
+                Total: <Price>{getCartTotalPrice(cart).toFixed(2)}</Price>
               </PriceRow>
               <CheckoutButton>Proceder con el pago</CheckoutButton>
             </TotalPrice>

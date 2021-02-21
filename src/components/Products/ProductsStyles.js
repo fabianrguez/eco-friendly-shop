@@ -17,7 +17,7 @@ export const ProductsListWrapper = styled.div`
 export const ProductCard = styled.div`
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  min-height: 330px;
+  min-height: 478px;
   min-width: 220px;
   max-width: 300px;
   padding: 1rem;
@@ -25,6 +25,9 @@ export const ProductCard = styled.div`
   cursor: pointer;
   transition: all ease-in-out 0.4s;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &:hover {
     transform: scale(1.02);

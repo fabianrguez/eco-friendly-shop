@@ -14,15 +14,17 @@ function Product({
 
   return (
     <ProductCard>
-      <Img fluid={image?.fluid} />
-      <h1>{name}</h1>
-      <p>
-        {shortDescription
-          ? truncate(description?.description)
-          : description?.description}
-      </p>
+      <Img fluid={image?.fluid} style={{borderRadius: '5px'}} />
+      <div>
+        <h1>{name}</h1>
+        <p>
+          {shortDescription
+            ? truncate(description?.description)
+            : description?.description}
+        </p>
+      </div>
       <ProductPrice>
-        <span>{price}€</span>
+        <span>{price.toFixed(2)}€</span>
       </ProductPrice>
     </ProductCard>
   );

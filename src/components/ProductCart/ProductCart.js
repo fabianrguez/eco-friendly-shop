@@ -9,7 +9,7 @@ import {
   ProductImage,
   ProductPrice,
   ProductPriceContainer,
-  ProductPriceWrapper
+  ProductPriceWrapper,
 } from './ProductCartStyle';
 
 function ProductCart({ id, name, price, image }) {
@@ -29,7 +29,7 @@ function ProductCart({ id, name, price, image }) {
         <h1>{name}</h1>
         <ProductPriceWrapper>
           <ProductPriceContainer>
-            <ProductPrice>{price}</ProductPrice>
+            <ProductPrice>{price.toFixed(2)}</ProductPrice>
           </ProductPriceContainer>
         </ProductPriceWrapper>
         <Button onClick={() => removeFromCart()}>
